@@ -2,7 +2,7 @@
 {% extends "layouts/base.html" %}
 
 <!- This variable sets name of browser tab  -->
-{% set project = "Stubby" %}
+{% set project = "About me" %}
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
@@ -14,6 +14,18 @@
         <p class="text-secondary">Here is my teams scrumboard</p>
         <img class="card-img-top" src="{{ url_for('static', filename='assets/Copy of Scrum Team Process - Emaad Mir, Edwin Abraham, Luka Van Den Boomen, Jishnu Singiresu.png') }}" alt="Flask Development" height="250">
     </div>
+    
+    <style>
+      * {
+        background-color: #00bff9;}       
+      </style>
+      
+      <form method="POST">
+      <input name="color" value="{{ color }}">
+      <input type="submit" value="Set">
+      </form>
+      <p>
+      <a href="/">home</a>
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->
